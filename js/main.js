@@ -46,41 +46,41 @@ uppskattat.controller(
         {
           section_title: "Management and Communications",
           items:[ 
-            {id: 1, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 2, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 3, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
           ]
         },
         {
           section_title: "Planning and Preparation",
           items:[ 
-            {id: 1, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 2, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 3, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
           ]
         },
         {
           section_title: "Client side Development",
           items:[ 
-            {id: 1, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 2, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 3, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
           ]
         },
         {
           section_title: "Server side Development",
           items:[ 
-            {id: 1, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 2, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 3, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
           ]
         },
         {
           section_title: "Quality Assurance",
           items:[ 
-            {id: 1, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 2, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {id: 3, title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
           ]
         }
       ],
@@ -107,14 +107,14 @@ uppskattat.controller(
      * Add empty row of item
      */
     $scope.addItem = function() {
-      $scope.estimate.sections.items.push({id: 0, title: "", description: "", target: 0, min: 0, max: 0, mean: 0});
+      $scope.estimate.sections.items.push({title: "", description: "", target: 0, min: 0, max: 0, mean: 0});
     }
 
     /**
      * Add empty section
      */
     $scope.addSection = function() {
-      $scope.estimate.sections.push({id: 0, title: "", description: "", target: 0, min: 0, max: 0, mean: 0});
+      $scope.estimate.sections.push({section_title: "Section title", items: [{title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0}]});
     }
 
 });

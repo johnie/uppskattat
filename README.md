@@ -8,7 +8,6 @@ Use this project here: [Uppskattat](http://uppskatt.at) or clone it and customiz
 
 ### Todo
 
-* Add section functionality
 * Calculate total hours
 
 ### Feature Requests
