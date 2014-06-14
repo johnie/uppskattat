@@ -1,0 +1,40 @@
+/*------------------------------------* 
+     $HELPERS 
+*------------------------------------*/
+/** 
+ * Various helper classes 
+ */
+
+
+
+
+/** 
+ * Align text 
+ */
+.text-align--left
+  text-align left !important
+
+.text-align--right
+  text-align right !important
+
+.text-align--center
+  text-align center !important
+
+
+/** 
+ * Font Weights 
+ */
+weights = (thin normal bold 300 500 600)
+
+for w in weights
+  .font-weight--{w}
+    font-weight w !important
+
+/** 
+ * Positions 
+ */
+positions = (relative absolute static)
+
+for i in positions
+  .position--{i}
+    position i !important

@@ -1,0 +1,40 @@
+/*------------------------------------* 
+   $ICONS 
+*------------------------------------*/
+/** 
+ * Icons 
+ */
+icons = ("github" "facebook" "twitter")
+
+/** 
+ * Reset 
+ */
+.icon
+  display inline-block
+  position relative
+  line-height 1
+  width 1.5em
+  height 1.5em
+  -webkit-background-size 100%
+  background-size 100%
+  background-position center center
+  background-repeat no-repeat
+
+/** 
+ * Icons iterations 
+ */
+basepath = 'images/'
+suffix = '.svg'
+
+for i in icons
+  .icon-{i}
+    background-image url(basepath + i + suffix)
+
+/** 
+ * Icon Positions 
+ */
+.icon--absolute
+  position absolute
+  top 50%
+  left -2.2em
+  vendor('transform', translateY(-50%))

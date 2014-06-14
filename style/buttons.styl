@@ -1,0 +1,59 @@
+/*------------------------------------* 
+   $BUTTONS 
+*------------------------------------*/
+/** 
+ * Simple buttons 
+ */
+
+.btn
+  display inline-block
+  padding 0 .8em
+  line-height 1.8
+  background-color $base-color
+  color #fff
+  vendor('border-radius', .25em)
+  font-weight 400
+  font-size .9em
+  vendor('transition', background-color .2s ease)
+
+  &:hover
+    color #fff
+
+
+
+/** 
+ * Elements 
+ */
+.btn__delete
+  display inline-block
+  width 1.5em
+  height 1.5em
+  line-height 1.5
+  padding 0
+  text-align center
+
+.btn__large
+  font-size 1em
+
+.btn__full
+  width 100%
+  display block
+  line-height 2.5
+  text-align center
+  font-size 1.3em
+
+/** 
+ * Modifiers 
+ */
+.btn--green
+  background-color $add-color
+  color #fff
+
+  &:hover
+    background-color $add-color--darken
+
+.btn--red
+  background-color $delete-color
+
+  &:hover
+    background-color $delete-color--darken
