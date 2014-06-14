@@ -166,6 +166,13 @@ uppskattat.controller(
       $scope.estimate.sections.push({section_title: "Section title", items: [{title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0}]});
     }
 
+    /**
+     * Remove section
+     */
+    $scope.removeSection = function( item ) {
+      $scope.estimate.sections.splice($scope.estimate.sections.indexOf( item ), 1);
+    }
+
 });
 
 /**
