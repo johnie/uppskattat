@@ -56,10 +56,10 @@
       <header class="estimate-header pbm" role="banner">
         <div class="flexbox">
           <div class="flexbox__item four-tenths">
-            <figure class="company-logo">
+            <figure class="company-logo" ng-hide="logoRemoved">
               <label for="imgInp">
                 <input type="file" id="imgInp" class="logo-input">
-                <img ng-hide="logoRemoved" id="company_logo" ng-model="logo" ng-src="{{company_logo}}" alt="Company Logo">
+                <img id="company_logo" ng-model="logo" ng-src="{{company_logo}}" alt="Company Logo">
               </label>
             </figure>
           </div>
@@ -134,7 +134,7 @@
             <tbody>
               <tr ng:repeat="item in section.items">
                 <td class="one-small print-mode" ng-hide="printMode"><a href ng-click="removeItem(item)" class="btn btn__delete btn--red">x</a></td>
-                <td class="one-medium text-align--center">{{ $parent.$index }}.{{ $index + 1 }}</td>
+                <td class="one-medium text-align--center">{{ $parent.$index + 1 }}.{{ $index + 1 }}</td>
                 <td class="one-half">
                   <h3 class="item-title"><input type="text" ng:model="item.title" select-on-click></h3>
                   <p class="item-description"><textarea ng:model="item.description" select-on-click></textarea></p>

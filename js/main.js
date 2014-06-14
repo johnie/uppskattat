@@ -102,14 +102,6 @@ uppskattat.controller(
     $scope.estimate = sample_estimate;
 
     /**
-     * Get index of section
-     */
-    $scope.sectionIndex = function() {
-      var index = $(".estimate-section").index();
-      return index;
-    }
-    
-    /**
      * Print page
      */
     $scope.printInfo = function() {
@@ -129,6 +121,25 @@ uppskattat.controller(
      */
     $scope.editLogo = function() {
       $("#imgInp").trigger("click");
+    }
+
+    /**
+     * Clear saved logo to sample.
+     */
+    $scope.removeLogo = function( element ) {
+      var elem = angular.element("#remove_logo");
+      if( elem.text() == "Show Logo") {
+        elem.text("Remove Logo");
+        elem.addClass('btn--red');
+        elem.removeClass('btn--green');
+        $scope.logoRemoved = false;
+      }
+      else {
+        elem.text("Show Logo");
+        elem.removeClass('btn--red');
+        elem.addClass('btn--green');
+        $scope.logoRemoved = true;
+      }
     }
 
     /**
