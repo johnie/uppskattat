@@ -77,38 +77,38 @@
           <div class="flexbox__item  one-half">
             <hgroup class="costumer-info  text--left">
               <div class="costumer-name">
-                <p><strong><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.name"></strong></p>
+                <p><strong><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.name" select-on-click></strong></p>
               </div>
               <div class="costumer-web">
-                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.web_link"></p>
+                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.web_link" select-on-click></p>
               </div>
               <div class="costumer-street">
-                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.address1"></p>
+                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.address1" select-on-click></p>
               </div>
               <div class="costumer-city">
-                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.address2"></p>
+                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.address2" select-on-click></p>
               </div>
               <div class="costumer-zip">
-                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.postal"></p>
+                <p><input type="text" class="text-align--left one-whole" ng-model="estimate.customer_info.postal" select-on-click></p>
               </div>
             </hgroup>
           </div>
           <div class="flexbox__item  one-half">
             <hgroup class="company-info text--right">
               <div class="company-name">
-                <p><strong><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.name"></strong></p>
+                <p><strong><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.name" select-on-click></strong></p>
               </div>
               <div class="company-web">
-                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.web_link"></p>
+                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.web_link" select-on-click></p>
               </div>
               <div class="company-street">
-                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.address1"></p>
+                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.address1" select-on-click></p>
               </div>
               <div class="company-city">
-                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.address2"></p>
+                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.address2" select-on-click></p>
               </div>
               <div class="company-zip">
-                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.postal"></p>
+                <p><input type="text" class="text-align--right one-whole" ng-model="estimate.company_info.postal" select-on-click></p>
               </div>
             </hgroup>
           </div>
@@ -117,7 +117,7 @@
 
       <main class="main pts" role="main">
         <section class="estimate-section pbm mbm" ng-repeat="section in estimate.sections">
-          <h2 class="section-title"><input type="text" ng-model="section.section_title"></h2>
+          <h2 class="section-title"><input type="text" ng-model="section.section_title" select-on-click></h2>
 
           <table class="estimate-table">
             <thead>
@@ -136,12 +136,12 @@
                 <td class="one-small print-mode" ng-hide="printMode"><a href ng-click="removeItem(item)" class="btn btn__delete btn--red">x</a></td>
                 <td class="one-medium text-align--center">{{ $parent.$index }}.{{ $index + 1 }}</td>
                 <td class="one-half">
-                  <h3 class="item-title"><input type="text" ng:model="item.title"></h3>
-                  <p class="item-description"><textarea ng:model="item.description"></textarea></p>
+                  <h3 class="item-title"><input type="text" ng:model="item.title" select-on-click></h3>
+                  <p class="item-description"><textarea ng:model="item.description" select-on-click></textarea></p>
                 </td>
-                <td class="text-align--right one-tenth"><input type="text" class="item-target text-align--right" ng:model="item.target" size="4" placeholder="0"></td>
-                <td class="text-align--right one-tenth"><input type="text" class="item-min text-align--right" ng:model="item.min" size="4" placeholder="0"></td>
-                <td class="text-align--right one-tenth"><input type="text" class="item-max text-align--right" ng:model="item.max" size="4" placeholder="0"></td>
+                <td class="text-align--right one-tenth"><input type="text" class="item-target text-align--right" ng:model="item.target" size="4" placeholder="0" select-on-click></td>
+                <td class="text-align--right one-tenth"><input type="text" class="item-min text-align--right" ng:model="item.min" size="4" placeholder="0" select-on-click></td>
+                <td class="text-align--right one-tenth"><input type="text" class="item-max text-align--right" ng:model="item.max" size="4" placeholder="0" select-on-click></td>
                 <td class="mean_total text-align--right font-weight--bold one-tenth">{{(item.target*1 + item.min*1 + item.max*1) / 3 | number:0 }}</td>
               </tr>
               <tr ng-hide="printMode" class="print-mode">
