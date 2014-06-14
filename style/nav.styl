@@ -1,0 +1,50 @@
+/*------------------------------------* 
+   NAVIGATION 
+*------------------------------------*/
+
+/** 
+ * Resets 
+ */
+.nav-wrap
+  position fixed
+  top 50%
+  left 0
+  vendor('transform', translateY(-50%))
+  clearfix()
+
+.nav
+  margin 0
+  padding 0
+  list-style none
+  font-size 10px
+
+  li
+    display block
+
+.nav-btn
+  width 6em
+  height 6em
+  background-color $brand-color
+  display block
+  text-indent -9999px
+  border-bottom 1px solid white
+  vendor('transition', background-color .3s ease)
+
+  &:hover
+    background-color $link-color
+
+/** 
+ * Nav button modifiers 
+ */
+navbtns = ("refresh" "print" "totop")
+
+basepath = 'images/'
+suffix = '.svg'
+
+for b in navbtns
+  .nav-btn--{b}
+    background-image url(basepath + b + suffix)
+    background-position center center
+    -webkit-background-size 50%
+    background-size 50%
+    background-repeat no-repeat

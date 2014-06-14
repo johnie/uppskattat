@@ -88,12 +88,28 @@ uppskattat.controller(
     };
 
     $scope.estimate = sample_estimate;
+
+    /**
+     * Get index of section
+     */
+    $scope.sectionIndex = function() {
+      var index = $(".estimate-section").index();
+      return index;
+    }
     
     /**
      * Print page
      */
     $scope.printInfo = function() {
       window.print();
+    };
+
+    /**
+     * Scroll top
+     */
+    $scope.scrollTop = function() {
+      $("html, body").animate({ scrollTop: 0 }, "fast");
+      return false;
     };
 
     /**
@@ -107,8 +123,18 @@ uppskattat.controller(
      * Add empty row of item
      */
     $scope.addItem = function() {
-      $scope.estimate.sections.items.push({title: "", description: "", target: 0, min: 0, max: 0, mean: 0});
+      angular.forEach($scope.estimate.sections, function (section) {
+        section.items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
+      });
     }
+
+    /**
+     * Remove item row
+     */
+    $scope.removeItem = function( item ) {
+      $scope.estimate.items.splice($scope.estimate.sections.items.indexOf( item ), 1);
+    }
+
 
     /**
      * Add empty section
