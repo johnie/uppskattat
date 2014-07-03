@@ -146,10 +146,8 @@ uppskattat.controller(
      * Add empty row of item
      */
     $scope.addItem = function() {
-      angular.forEach($scope.estimate.sections, function (section) {
-        section.items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
-      });
-    }
+      $scope.estimate.sections[sectionIndex].items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
+    };
 
     /**
      * Remove item row
