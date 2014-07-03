@@ -58,9 +58,9 @@ uppskattat.controller(
         {
           section_title: "Management and Communications",
           items:[ 
-            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0}, 
-            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0}, 
-            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0} 
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rerum!", target: 0, min: 0, max: 0, mean: 0},
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, obcaecati.", target: 0, min: 0, max: 0, mean: 0},
+            {title: "Item title", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, cupiditate.", target: 0, min: 0, max: 0, mean: 0}
           ]
         },
         {
@@ -145,8 +145,8 @@ uppskattat.controller(
     /**
      * Add empty row of item
      */
-    $scope.addItem = function() {
-      $scope.estimate.sections[sectionIndex].items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
+    $scope.addItem = function(sectionIndex) {
+        $scope.estimate.sections[sectionIndex].items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
     };
 
     /**

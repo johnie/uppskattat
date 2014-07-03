@@ -10,7 +10,8 @@
 
   <script src="http://www.google.com/jsapi"></script>
   <script>google.load("jquery", "1");</script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script type="text/javascript" src="//use.typekit.net/ksq4uyr.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -132,7 +133,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng:repeat="item in section.items">
+              <tr ng-repeat="item in section.items">
                 <td class="one-small print-mode" ng-hide="printMode"><a href ng-click="removeItem(item)" class="btn btn__delete btn--red">x</a></td>
                 <td class="one-medium text-align--center">{{ $parent.$index + 1 }}.{{ $index + 1 }}</td>
                 <td class="one-half">
@@ -145,7 +146,7 @@
                 <td class="mean_total text-align--right font-weight--bold one-tenth">{{(item.target*1 + item.min*1 + item.max*1) / 3 | number:0 }}</td>
               </tr>
               <tr ng-hide="printMode" class="print-mode">
-                <td colspan="7"><a class="btn" href ng:click="addItem($index)"><span class="prs">+</span> Add Item</a> <a class="btn btn--red" href ng:click="removeSection()" style="float: right;"><span class="prs">✕</span> Remove Section</a></td>
+                <td colspan="7"><a class="btn" href ng-click="addItem($index)"><span class="prs">+</span> Add Item</a> <a class="btn btn--red" href ng-click="removeSection()" style="float: right;"><span class="prs">✕</span> Remove Section</a></td>
               </tr>
             </tbody>
           </table>
