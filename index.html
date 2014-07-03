@@ -145,7 +145,7 @@
                 <td class="mean_total text-align--right font-weight--bold one-tenth">{{(item.target*1 + item.min*1 + item.max*1) / 3 | number:0 }}</td>
               </tr>
               <tr ng-hide="printMode" class="print-mode">
-                <td colspan="7"><a class="btn" href ng:click="addItem()"><span class="prs">+</span> Add Item</a> <a class="btn btn--red" href ng:click="removeSection()" style="float: right;"><span class="prs">✕</span> Remove Section</a></td>
+                <td colspan="7"><a class="btn" href ng:click="addItem($index)"><span class="prs">+</span> Add Item</a> <a class="btn btn--red" href ng:click="removeSection()" style="float: right;"><span class="prs">✕</span> Remove Section</a></td>
               </tr>
             </tbody>
           </table>
