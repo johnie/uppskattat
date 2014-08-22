@@ -145,15 +145,15 @@ uppskattat.controller(
     /**
      * Add empty row of item
      */
-    $scope.addItem = function(sectionIndex) {
+    $scope.addItem = function( sectionIndex ) {
         $scope.estimate.sections[sectionIndex].items.push({title: "Item title", description: "Item description", target: 0, min: 0, max: 0, mean: 0});
     };
 
     /**
      * Remove item row
      */
-    $scope.removeItem = function( item ) {
-      $scope.estimate.items.splice($scope.estimate.sections.items.indexOf( item ), 1);
+    $scope.removeItem = function( sectionIndex, item ) {
+      $scope.estimate.sections[sectionIndex].items.splice(item, 1);
     }
 
 
