@@ -1,4 +1,4 @@
-# Uppskattat - Estimate calculator
+# Uppskattat - Build better estimates 
 
 Use this extremely small and lightweight project built in Angular JS to write your Estimates. No monthly fees, No Subscriptions - No heavy duty features, just simple estimates.
 
