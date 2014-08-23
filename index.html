@@ -59,7 +59,7 @@
             <figure class="company-logo" ng-hide="logoRemoved">
               <label for="imgInp">
                 <input type="file" id="imgInp" class="logo-input">
-                <img id="company_logo" ng-model="logo" ng-src="{{company_logo}}" alt="Company Logo">
+                <img id="company_logo" ng-model="logo" ng-src="{{ estimate.company_logo }}" alt="Company Logo">
               </label>
             </figure>
           </div>
@@ -115,10 +115,9 @@
         </div>
       </section><!-- Estimate info -->
 
-      <main class="main pts" role="main">
+      <main class="main pts" role="main" ui-sortable ng-model="estimate.sections">
         <section class="estimate-section pbm mbm" ng-repeat="section in estimate.sections">
           <h2 class="section-title"><input type="text" ng-model="section.section_title" select-on-click></h2>
-
           <table class="estimate-table">
             <thead>
               <tr>
@@ -161,6 +160,11 @@
     </div>
   </div>
   <script src="js/autosize.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="js/sortable.js"></script>
+  <script src="js/filters/filters.js"></script>
+  <script src="js/directives/mainDirectives.js"></script>
+  <script src="js/services/mainServices.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
