@@ -8,7 +8,9 @@ Use this project here: [Uppskattat](http://uppskatt.at) or clone it and customiz
 
 ### Todos
 
-* Calculate total hours
+* <input type=checkbox> Calculate total hours
+* <input type=checkbox> Save the logo in localstorage
+* <input type=checkbox> Footnotes
 
 ### Feature Requests
 

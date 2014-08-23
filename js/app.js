@@ -46,7 +46,7 @@ angular.module("uppskattat", [
        * Clear LocalStorage
        */
       $scope.clearLocalStorage = function() {
-        var confirmClear = confirm("Are you sure you want to clear the progress?");
+        var confirmClear = confirm("Are you sure you want to clear the estimate?");
         if( confirmClear ) {
           localStorage["estimate"] = "";
           $scope.estimate = data;
