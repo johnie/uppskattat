@@ -115,7 +115,7 @@
         </div>
       </section><!-- Estimate info -->
 
-      <main class="main pts" role="main" ui-sortable ng-model="estimate.sections">
+      <main class="main pts" role="main" ui-sortable="sortableOptions" ng-model="estimate.sections">
         <section class="estimate-section pbm mbm" ng-repeat="section in estimate.sections">
           <h2 class="section-title"><input type="text" ng-model="section.section_title" select-on-click></h2>
           <table class="estimate-table">
@@ -160,7 +160,7 @@
     </div>
   </div>
   <script src="js/autosize.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/sortable.js"></script>
   <script src="js/filters/filters.js"></script>
   <script src="js/directives/mainDirectives.js"></script>

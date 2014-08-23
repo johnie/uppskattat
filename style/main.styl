@@ -205,6 +205,35 @@ a
 /** 
  * Sections 
  */
+.estimate-section
+  position relative
+
+  &:before
+    content ''
+    display block
+    background $base-color url('images/move.svg') center center no-repeat
+    width 36px
+    height 36px
+    position absolute
+    top 41px
+    left -36px
+    vendor('border-radius', 50% 0 0 50%)
+    vendor('background-size', 50%)
+    vendor('transition', opacity .2s ease)
+    cursor move
+    opacity 0
+
+  &:hover
+    &:before
+      opacity 1
+
+.ui-state-highlight
+  height 300px
+  width 100%
+  margin-bottom 2em
+  background-color #f0f0f0
+  border 1px solid #ddd
+
 .section-title
   margin 0
   margin-bottom 5px

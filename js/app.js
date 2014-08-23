@@ -19,9 +19,24 @@ angular.module("uppskattat", [
     $scope.logoRemoved = false;
     $scope.printMode   = false;
 
+
+    /**
+     * Sample Data
+     */
     sampleEstimate.fetch().then(function (data) {
       $scope.estimate = data;
     });
+
+    /**
+     * Sortable options
+     */
+    $scope.sortableOptions = {
+      placeholder: 'ui-state-highlight',
+      scrollSensitivity: 50,
+      start: function(e, ui ){
+        ui.placeholder.height(ui.helper.outerHeight());
+      }
+    };
 
     /**
      * Print page
