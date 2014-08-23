@@ -24,7 +24,35 @@ angular.module("uppskattat", [
      * Sample Data
      */
     sampleEstimate.fetch().then(function (data) {
-      $scope.estimate = data;
+      /**
+       * Check if data has been modified, otherwise user estimate samples
+       */
+      if (localStorage["estimate"] == "" || localStorage["estimate"] == null) {
+        $scope.estimate = data;
+        $scope.estimate.start_date = new Date().toJSON().slice(0,10);
+      }
+      else {
+        $scope.estimate = JSON.parse(localStorage["estimate"]);
+      }
+
+      /**
+       * Always watch for changes
+       */
+      $scope.$watch("estimate", function() {
+        localStorage["estimate"] = JSON.stringify($scope.estimate);
+      }, true);
+
+      /**
+       * Clear LocalStorage
+       */
+      $scope.clearLocalStorage = function() {
+        var confirmClear = confirm("Are you sure you want to clear the progress?");
+        if( confirmClear ) {
+          localStorage["estimate"] = "";
+          $scope.estimate = data;
+        }
+      }
+
     });
 
     /**

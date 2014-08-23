@@ -10,7 +10,7 @@
 
   <script src="http://www.google.com/jsapi"></script>
   <script>google.load("jquery", "1");</script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
   <script type="text/javascript" src="//use.typekit.net/ksq4uyr.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -24,7 +24,7 @@
   <div class="site">
     <nav class="nav-wrap print-mode">
       <ul class="nav">
-        <li><a ng-click="" href class="nav-btn nav-btn--refresh" title="Clear localstorage">Clear localstorage</a></li>
+        <li><a ng-click="clearLocalStorage()" href class="nav-btn nav-btn--refresh" title="Clear localstorage">Clear localstorage</a></li>
         <li><a ng-click="printInfo()" href class="nav-btn nav-btn--print" title="Print estimate">Print estimate</a></li>
         <li><a ng-click="scrollTop()" href class="nav-btn nav-btn--totop" title="Scroll to top">Scroll to top</a></li>
       </ul>
@@ -65,6 +65,7 @@
           </div>
           <div class="flexbox__item six-tenths">
             <h1 class="page-title"><input type="text" ng-model="estimate.estimate_title"></h1>
+            <h3 class="page-date"><input type="text" ng-model="estimate.start_date"></h3>
           </div>
         </div>
         <div class="no-print pts" ng-hide="printMode">
